@@ -12,6 +12,9 @@ directory, then press enter.")
         os.path.join(os.path.dirname(__file__), "../bin")
     )
     bin_files = os.listdir(bin_path)
+    if len(bin_files) == 0:
+        print("No files were found.")
+        return None
     print(f"    {len(bin_files)} files were found!")
     print("    Make a selection from the files below.")
     # Display all files found in the bin directory.
