@@ -2,7 +2,7 @@ import src.cloner
 import src.input_handler
 
 print("""
-Honeybee File Cloning Utility V1.0
+Honeybee File Cloning Utility V1.1
 Copyright (C) Grzegorz Ciolek
 -------------------------------
 """)
@@ -10,6 +10,8 @@ def run():
     confirmation = 0
     while confirmation == 0:
         target = src.input_handler.get_file()
+        if target == None:
+            exit()
         name_template = src.input_handler.get_naming_conv()
         copy_amount = src.input_handler.get_quantity()
         output_directory = src.input_handler.get_output_dir()
